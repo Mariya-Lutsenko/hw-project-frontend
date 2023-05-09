@@ -1,0 +1,117 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(72, 157, 242, 1);
+  margin: 30px auto;
+}
+
+h1 {
+  position: relative;
+  margin: auto;
+  margin-bottom: 15px;
+  font-size: 3em;
+  word-spacing: 0.2em;
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  color: transparent;
+  background-color: rgba(72, 157, 242, 1);
+  background-clip: text;
+}
+
+h1::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    transparent 6rem,
+    white 11rem,
+    transparent 11.15rem,
+    transparent 15rem,
+    rgba(255, 255, 255, 0.3) 20rem,
+    transparent 25rem,
+    transparent 27rem,
+    rgba(255, 255, 255, 0.6) 32rem,
+    white 33rem,
+    rgba(255, 255, 255, 0.3) 33.15rem,
+    transparent 38rem,
+    transparent 40rem,
+    rgba(255, 255, 255, 0.3) 45rem,
+    transparent 50rem,
+    transparent 100%
+  );
+  background-clip: text;
+  background-size: 150% 100%;
+  background-repeat: no-repeat;
+  animation: shine 5s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: -190% 0;
+  }
+}
+.thumb {
+  margin: 0 auto;
+  width: 400px;
+}
+
+.image {
+  max-width: 100%;
+  margin-bottom: 15px;
+  border-radius: 50px;
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(8, 101, 233, 0);
+}
+.button {
+  width: 150px;
+  height: 40px;
+  color: rgb(30, 131, 233);
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  background-color: #86baf7;
+  background-image: linear-gradient(315deg, #86baf7 0%, #b8d6f9 74%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #b8d6f9;
+  background-image: linear-gradient(315deg, #b8d6f9 0%, #86baf7 74%);
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    margin: 10px auto;
+  }
+  .thumb {
+    width: 300px;
+  }
+}

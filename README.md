@@ -1,1 +1,1 @@
-# hw-project-frontend
+# goit-react-hw-08-phonebook
